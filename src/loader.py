@@ -7,7 +7,16 @@ def load_stars(file_path):
             return json.load(f)
     elif file_path.endswith(".csv"):
         with open(file_path, 'r') as f:
-            return list(csv.DictReader(f))
+            reader = csv.DictReader(f)
+            stars = []
+            for row in reader:
+                stars.append({
+                    "name": row["name"],
+                    "ra": float(row["ra"]),
+                    "dec": float(row["dec"]),
+                    "mag": float(row["mag"]),
+                })
+            return stars
     else:
         raise ValueError("Unsupported file format. Use. json or .csv")
 

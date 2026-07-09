@@ -1,6 +1,6 @@
 # Stellar CLI
 
-A command line utility for exploring and analyzing star catalogs.
+A command line utility for exploring and analyzing star catalogs. For those interested in the stars
 
 ## Features
 
@@ -9,12 +9,15 @@ A command line utility for exploring and analyzing star catalogs.
 - **Sorting:** Easily organize star catalogs by name or magnitude using built-in sorting logic.
 - **Terminal Visualization:** Render clean, easy-to-read ASCII tables directly in your terminal.
 
+## Asciinema Demo Link
+https://asciinema.org/a/GqqmkDs0NXDitKDZ
+
 
 ## Installation & Setup
 
 1. Clone the repository:
    ```bash
-   git clone <repo-url>
+   git clone https://github.com/D4LMwastaken/stellar-cli.git
    cd stellar-cli
    ```
 
@@ -29,13 +32,13 @@ A command line utility for exploring and analyzing star catalogs.
 
 ```bash
 # Run the tool with a star catalog
-python3 -m src.main --file data/stars.json
+python3 -m src.main --file data/stars1.json
 
 # Filter by magnitude
-python3 -m src.main --file data/stars.json --max-mag 0
+python3 -m src.main --file data/stars1.json --max-mag 0
 
 # Sort by name
-python3 -m src.main --file data/stars.json --sort name
+python3 -m src.main --file data/stars1.json --sort name
 ```
 
 ## Developer Commands

@@ -6,7 +6,7 @@ def test_load_csv_stars():
 
     assert len(data) == 2
     assert data[0]["name"] == "Sirius"
-    assert data[0]["mag"] == '-1.46'
+    assert data[0]["mag"] == -1.46
 
 def test_load_stars_return_expected_data():
     file_path = "data/stars.json"
