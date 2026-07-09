@@ -1,7 +1,12 @@
-import pytest
-import json
-import os
 from src.loader import load_stars
+
+def test_load_csv_stars():
+    file_path = "data/stars.csv"
+    data = load_stars(file_path)
+
+    assert len(data) == 2
+    assert data[0]["name"] == "Sirius"
+    assert data[0]["mag"] == '-1.46'
 
 def test_load_stars_return_expected_data():
     file_path = "data/stars.json"
